@@ -1,0 +1,736 @@
+/var/tmp/824-157915/skv-9966-basics-0 come up, config={0 [0 0 0 0 0 0 0 0 0 0] map[]}
+/var/tmp/824-157915/skv-9966-basics-1 come up, config={0 [0 0 0 0 0 0 0 0 0 0] map[]}
+I am /var/tmp/824-157915/skv-9966-basics-0, here are my key values
+map[]
+/var/tmp/824-157915/skv-9966-basics-2 come up, config={0 [0 0 0 0 0 0 0 0 0 0] map[]}
+I am /var/tmp/824-157915/skv-9966-basics-1, here are my key values
+map[]
+/var/tmp/824-157915/skv-9966-basics-3 come up, config={0 [0 0 0 0 0 0 0 0 0 0] map[]}
+I am /var/tmp/824-157915/skv-9966-basics-2, here are my key values
+map[]
+I am /var/tmp/824-157915/skv-9966-basics-3, here are my key values
+map[]
+/var/tmp/824-157915/skv-9966-basics-4 come up, config={0 [0 0 0 0 0 0 0 0 0 0] map[]}
+/var/tmp/824-157915/skv-9966-basics-5 come up, config={0 [0 0 0 0 0 0 0 0 0 0] map[]}
+I am /var/tmp/824-157915/skv-9966-basics-4, here are my key values
+map[]
+/var/tmp/824-157915/skv-9966-basics-6 come up, config={0 [0 0 0 0 0 0 0 0 0 0] map[]}
+I am /var/tmp/824-157915/skv-9966-basics-5, here are my key values
+map[]
+I am /var/tmp/824-157915/skv-9966-basics-6, here are my key values
+map[]
+/var/tmp/824-157915/skv-9966-basics-7 come up, config={0 [0 0 0 0 0 0 0 0 0 0] map[]}
+/var/tmp/824-157915/skv-9966-basics-8 come up, config={0 [0 0 0 0 0 0 0 0 0 0] map[]}
+Test: Basic Join/Leave ...
+I am /var/tmp/824-157915/skv-9966-basics-7, here are my key values
+map[]
+In Tick, /var/tmp/824-157915/skv-9966-basics-8 config change to {1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2]]}
+In Tick, /var/tmp/824-157915/skv-9966-basics-0 config change to {1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2]]}
+/var/tmp/824-157915/skv-9966-basics-0 Received Put, Key=a,Value=x
+Current sequence = 1
+seq = 1, Op=<nil>
+In Tick, /var/tmp/824-157915/skv-9966-basics-1 config change to {1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2]]}
+Paxos have decided on {Put a x {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}
+Performed operation:{Put a x {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0},result=x
+
+/var/tmp/824-157915/skv-9966-basics-0 Received Append, Key=a,Value=b
+Current sequence = 2
+seq = 2, Op=<nil>
+Paxos have decided on {Append a b {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}
+Performed operation:{Append a b {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0},result=xb
+
+/var/tmp/824-157915/skv-9966-basics-0 Received Get, Key=a
+Current sequence = 3
+seq = 3, Op=<nil>, status=2
+In Tick, /var/tmp/824-157915/skv-9966-basics-2 config change to {1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2]]}
+Paxos have decided on {Get a  {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}
+Performed operation:{Get a  {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}, result=xb
+
+inside get, result={xb map[] OK}
+/var/tmp/824-157915/skv-9966-basics-0 Received Put, Key=5577006791947779410,Value=8674665223082153551
+Current sequence = 4
+seq = 4, Op=<nil>
+In Tick, /var/tmp/824-157915/skv-9966-basics-3 config change to {1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2]]}
+Paxos have decided on {Put 5577006791947779410 8674665223082153551 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}
+Performed operation:{Put 5577006791947779410 8674665223082153551 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0},result=8674665223082153551
+
+/var/tmp/824-157915/skv-9966-basics-0 Received Put, Key=6129484611666145821,Value=4037200794235010051
+Current sequence = 5
+seq = 5, Op=<nil>
+Paxos have decided on {Put 6129484611666145821 4037200794235010051 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}
+Performed operation:{Put 6129484611666145821 4037200794235010051 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0},result=4037200794235010051
+
+/var/tmp/824-157915/skv-9966-basics-0 Received Put, Key=3916589616287113937,Value=6334824724549167320
+Current sequence = 6
+seq = 6, Op=<nil>
+Paxos have decided on {Put 3916589616287113937 6334824724549167320 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}
+Performed operation:{Put 3916589616287113937 6334824724549167320 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0},result=6334824724549167320
+
+/var/tmp/824-157915/skv-9966-basics-0 Received Put, Key=605394647632969758,Value=1443635317331776148
+Current sequence = 7
+seq = 7, Op=<nil>
+In Tick, /var/tmp/824-157915/skv-9966-basics-4 config change to {1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2]]}
+Paxos have decided on {Put 605394647632969758 1443635317331776148 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}
+Performed operation:{Put 605394647632969758 1443635317331776148 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0},result=1443635317331776148
+
+/var/tmp/824-157915/skv-9966-basics-0 Received Put, Key=894385949183117216,Value=2775422040480279449
+Current sequence = 8
+seq = 8, Op=<nil>
+Paxos have decided on {Put 894385949183117216 2775422040480279449 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}
+Performed operation:{Put 894385949183117216 2775422040480279449 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0},result=2775422040480279449
+
+/var/tmp/824-157915/skv-9966-basics-0 Received Put, Key=4751997750760398084,Value=7504504064263669287
+Current sequence = 9
+seq = 9, Op=<nil>
+In Tick, /var/tmp/824-157915/skv-9966-basics-5 config change to {1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2]]}
+Paxos have decided on {Put 4751997750760398084 7504504064263669287 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}
+Performed operation:{Put 4751997750760398084 7504504064263669287 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0},result=7504504064263669287
+
+/var/tmp/824-157915/skv-9966-basics-0 Received Put, Key=1976235410884491574,Value=3510942875414458836
+Current sequence = 10
+seq = 10, Op=<nil>
+In Tick, /var/tmp/824-157915/skv-9966-basics-6 config change to {1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2]]}
+Paxos have decided on {Put 1976235410884491574 3510942875414458836 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}
+Performed operation:{Put 1976235410884491574 3510942875414458836 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0},result=3510942875414458836
+
+/var/tmp/824-157915/skv-9966-basics-0 Received Put, Key=2933568871211445515,Value=4324745483838182873
+Current sequence = 11
+seq = 11, Op=<nil>
+Paxos have decided on {Put 2933568871211445515 4324745483838182873 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}
+Performed operation:{Put 2933568871211445515 4324745483838182873 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0},result=4324745483838182873
+
+/var/tmp/824-157915/skv-9966-basics-0 Received Put, Key=2610529275472644968,Value=2703387474910584091
+Current sequence = 12
+seq = 12, Op=<nil>
+Paxos have decided on {Put 2610529275472644968 2703387474910584091 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}
+Performed operation:{Put 2610529275472644968 2703387474910584091 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0},result=2703387474910584091
+
+/var/tmp/824-157915/skv-9966-basics-0 Received Put, Key=6263450610539110790,Value=2015796113853353331
+Current sequence = 13
+seq = 13, Op=<nil>
+In Tick, /var/tmp/824-157915/skv-9966-basics-7 config change to {1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2]]}
+Paxos have decided on {Put 6263450610539110790 2015796113853353331 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}
+Performed operation:{Put 6263450610539110790 2015796113853353331 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0},result=2015796113853353331
+
+In Tick, /var/tmp/824-157915/skv-9966-basics-8 config change to {2 [101 101 101 101 101 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2] 101:[/var/tmp/824-157915/skv-9966-basics-3 /var/tmp/824-157915/skv-9966-basics-4 /var/tmp/824-157915/skv-9966-basics-5]]}
+Inside startReconfig
+new config={2 [101 101 101 101 101 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2] 101:[/var/tmp/824-157915/skv-9966-basics-3 /var/tmp/824-157915/skv-9966-basics-4 /var/tmp/824-157915/skv-9966-basics-5]]}
+current config={1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2]]}
+I am /var/tmp/824-157915/skv-9966-basics-8, here are my key values
+map[]
+In Tick, /var/tmp/824-157915/skv-9966-basics-0 config change to {2 [101 101 101 101 101 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2] 101:[/var/tmp/824-157915/skv-9966-basics-3 /var/tmp/824-157915/skv-9966-basics-4 /var/tmp/824-157915/skv-9966-basics-5]]}
+Inside startReconfig
+new config={2 [101 101 101 101 101 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2] 101:[/var/tmp/824-157915/skv-9966-basics-3 /var/tmp/824-157915/skv-9966-basics-4 /var/tmp/824-157915/skv-9966-basics-5]]}
+current config={1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2]]}
+I am /var/tmp/824-157915/skv-9966-basics-0, here are my key values
+map[3916589616287113937:6334824724549167320 5577006791947779410:8674665223082153551 6129484611666145821:4037200794235010051 605394647632969758:1443635317331776148 894385949183117216:2775422040480279449 4751997750760398084:7504504064263669287 1976235410884491574:3510942875414458836 2933568871211445515:4324745483838182873 a:xb 6263450610539110790:2015796113853353331 2610529275472644968:2703387474910584091]
+In Tick, /var/tmp/824-157915/skv-9966-basics-1 config change to {2 [101 101 101 101 101 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2] 101:[/var/tmp/824-157915/skv-9966-basics-3 /var/tmp/824-157915/skv-9966-basics-4 /var/tmp/824-157915/skv-9966-basics-5]]}
+Inside startReconfig
+new config={2 [101 101 101 101 101 100 100 100 100 100] map[101:[/var/tmp/824-157915/skv-9966-basics-3 /var/tmp/824-157915/skv-9966-basics-4 /var/tmp/824-157915/skv-9966-basics-5] 100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2]]}
+current config={1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2]]}
+I am /var/tmp/824-157915/skv-9966-basics-1, here are my key values
+map[]
+In Tick, /var/tmp/824-157915/skv-9966-basics-2 config change to {2 [101 101 101 101 101 100 100 100 100 100] map[101:[/var/tmp/824-157915/skv-9966-basics-3 /var/tmp/824-157915/skv-9966-basics-4 /var/tmp/824-157915/skv-9966-basics-5] 100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2]]}
+Inside startReconfig
+new config={2 [101 101 101 101 101 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2] 101:[/var/tmp/824-157915/skv-9966-basics-3 /var/tmp/824-157915/skv-9966-basics-4 /var/tmp/824-157915/skv-9966-basics-5]]}
+current config={1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2]]}
+I am /var/tmp/824-157915/skv-9966-basics-2, here are my key values
+map[]
+In Tick, /var/tmp/824-157915/skv-9966-basics-3 config change to {2 [101 101 101 101 101 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2] 101:[/var/tmp/824-157915/skv-9966-basics-3 /var/tmp/824-157915/skv-9966-basics-4 /var/tmp/824-157915/skv-9966-basics-5]]}
+Inside startReconfig
+new config={2 [101 101 101 101 101 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2] 101:[/var/tmp/824-157915/skv-9966-basics-3 /var/tmp/824-157915/skv-9966-basics-4 /var/tmp/824-157915/skv-9966-basics-5]]}
+current config={1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2]]}
+/var/tmp/824-157915/skv-9966-basics-3 get shard from server /var/tmp/824-157915/skv-9966-basics-0
+/var/tmp/824-157915/skv-9966-basics-0 Received GetShard, shardNum=0
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-0 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-3 get shard from server /var/tmp/824-157915/skv-9966-basics-1
+/var/tmp/824-157915/skv-9966-basics-1 Received GetShard, shardNum=0
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-1 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-3 get shard from server /var/tmp/824-157915/skv-9966-basics-2
+/var/tmp/824-157915/skv-9966-basics-2 Received GetShard, shardNum=0
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-2 does not own the shard
+In Tick, /var/tmp/824-157915/skv-9966-basics-4 config change to {2 [101 101 101 101 101 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2] 101:[/var/tmp/824-157915/skv-9966-basics-3 /var/tmp/824-157915/skv-9966-basics-4 /var/tmp/824-157915/skv-9966-basics-5]]}
+Inside startReconfig
+new config={2 [101 101 101 101 101 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2] 101:[/var/tmp/824-157915/skv-9966-basics-3 /var/tmp/824-157915/skv-9966-basics-4 /var/tmp/824-157915/skv-9966-basics-5]]}
+current config={1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2]]}
+/var/tmp/824-157915/skv-9966-basics-4 get shard from server /var/tmp/824-157915/skv-9966-basics-0
+/var/tmp/824-157915/skv-9966-basics-0 Received GetShard, shardNum=0
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-0 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-4 get shard from server /var/tmp/824-157915/skv-9966-basics-1
+/var/tmp/824-157915/skv-9966-basics-1 Received GetShard, shardNum=0
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-1 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-4 get shard from server /var/tmp/824-157915/skv-9966-basics-2
+/var/tmp/824-157915/skv-9966-basics-2 Received GetShard, shardNum=0
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-2 does not own the shard
+In Tick, /var/tmp/824-157915/skv-9966-basics-5 config change to {2 [101 101 101 101 101 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2] 101:[/var/tmp/824-157915/skv-9966-basics-3 /var/tmp/824-157915/skv-9966-basics-4 /var/tmp/824-157915/skv-9966-basics-5]]}
+Inside startReconfig
+new config={2 [101 101 101 101 101 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2] 101:[/var/tmp/824-157915/skv-9966-basics-3 /var/tmp/824-157915/skv-9966-basics-4 /var/tmp/824-157915/skv-9966-basics-5]]}
+current config={1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2]]}
+/var/tmp/824-157915/skv-9966-basics-5 get shard from server /var/tmp/824-157915/skv-9966-basics-0
+/var/tmp/824-157915/skv-9966-basics-0 Received GetShard, shardNum=0
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-0 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-5 get shard from server /var/tmp/824-157915/skv-9966-basics-1
+/var/tmp/824-157915/skv-9966-basics-1 Received GetShard, shardNum=0
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-1 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-5 get shard from server /var/tmp/824-157915/skv-9966-basics-2
+/var/tmp/824-157915/skv-9966-basics-2 Received GetShard, shardNum=0
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-2 does not own the shard
+In Tick, /var/tmp/824-157915/skv-9966-basics-6 config change to {2 [101 101 101 101 101 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2] 101:[/var/tmp/824-157915/skv-9966-basics-3 /var/tmp/824-157915/skv-9966-basics-4 /var/tmp/824-157915/skv-9966-basics-5]]}
+Inside startReconfig
+new config={2 [101 101 101 101 101 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2] 101:[/var/tmp/824-157915/skv-9966-basics-3 /var/tmp/824-157915/skv-9966-basics-4 /var/tmp/824-157915/skv-9966-basics-5]]}
+current config={1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2]]}
+I am /var/tmp/824-157915/skv-9966-basics-6, here are my key values
+map[]
+In Tick, /var/tmp/824-157915/skv-9966-basics-7 config change to {2 [101 101 101 101 101 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2] 101:[/var/tmp/824-157915/skv-9966-basics-3 /var/tmp/824-157915/skv-9966-basics-4 /var/tmp/824-157915/skv-9966-basics-5]]}
+Inside startReconfig
+new config={2 [101 101 101 101 101 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2] 101:[/var/tmp/824-157915/skv-9966-basics-3 /var/tmp/824-157915/skv-9966-basics-4 /var/tmp/824-157915/skv-9966-basics-5]]}
+current config={1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-basics-0 /var/tmp/824-157915/skv-9966-basics-1 /var/tmp/824-157915/skv-9966-basics-2]]}
+I am /var/tmp/824-157915/skv-9966-basics-7, here are my key values
+map[]
+/var/tmp/824-157915/skv-9966-basics-3 get shard from server /var/tmp/824-157915/skv-9966-basics-0
+/var/tmp/824-157915/skv-9966-basics-0 Received GetShard, shardNum=1
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-0 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-3 get shard from server /var/tmp/824-157915/skv-9966-basics-1
+/var/tmp/824-157915/skv-9966-basics-1 Received GetShard, shardNum=1
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-1 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-3 get shard from server /var/tmp/824-157915/skv-9966-basics-2
+/var/tmp/824-157915/skv-9966-basics-2 Received GetShard, shardNum=1
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-2 does not own the shard
+I am /var/tmp/824-157915/skv-9966-basics-8, here are my key values
+map[]
+/var/tmp/824-157915/skv-9966-basics-4 get shard from server /var/tmp/824-157915/skv-9966-basics-0
+/var/tmp/824-157915/skv-9966-basics-0 Received GetShard, shardNum=1
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-0 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-4 get shard from server /var/tmp/824-157915/skv-9966-basics-1
+/var/tmp/824-157915/skv-9966-basics-1 Received GetShard, shardNum=1
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-1 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-4 get shard from server /var/tmp/824-157915/skv-9966-basics-2
+/var/tmp/824-157915/skv-9966-basics-2 Received GetShard, shardNum=1
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-2 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-5 get shard from server /var/tmp/824-157915/skv-9966-basics-0
+/var/tmp/824-157915/skv-9966-basics-0 Received GetShard, shardNum=1
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-0 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-5 get shard from server /var/tmp/824-157915/skv-9966-basics-1
+/var/tmp/824-157915/skv-9966-basics-1 Received GetShard, shardNum=1
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-1 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-5 get shard from server /var/tmp/824-157915/skv-9966-basics-2
+/var/tmp/824-157915/skv-9966-basics-2 Received GetShard, shardNum=1
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-2 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-3 get shard from server /var/tmp/824-157915/skv-9966-basics-0
+I am /var/tmp/824-157915/skv-9966-basics-0, here are my key values
+map[3916589616287113937:6334824724549167320 6129484611666145821:4037200794235010051 605394647632969758:1443635317331776148 894385949183117216:2775422040480279449 4751997750760398084:7504504064263669287 1976235410884491574:3510942875414458836 2933568871211445515:4324745483838182873 a:xb 5577006791947779410:8674665223082153551 2610529275472644968:2703387474910584091 6263450610539110790:2015796113853353331]
+/var/tmp/824-157915/skv-9966-basics-0 Received GetShard, shardNum=2
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-0 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-3 get shard from server /var/tmp/824-157915/skv-9966-basics-1
+/var/tmp/824-157915/skv-9966-basics-1 Received GetShard, shardNum=2
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-1 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-3 get shard from server /var/tmp/824-157915/skv-9966-basics-2
+/var/tmp/824-157915/skv-9966-basics-2 Received GetShard, shardNum=2
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-2 does not own the shard
+I am /var/tmp/824-157915/skv-9966-basics-1, here are my key values
+map[]
+/var/tmp/824-157915/skv-9966-basics-4 get shard from server /var/tmp/824-157915/skv-9966-basics-0
+/var/tmp/824-157915/skv-9966-basics-0 Received GetShard, shardNum=2
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-0 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-4 get shard from server /var/tmp/824-157915/skv-9966-basics-1
+/var/tmp/824-157915/skv-9966-basics-1 Received GetShard, shardNum=2
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-1 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-4 get shard from server /var/tmp/824-157915/skv-9966-basics-2
+/var/tmp/824-157915/skv-9966-basics-2 Received GetShard, shardNum=2
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-2 does not own the shard
+I am /var/tmp/824-157915/skv-9966-basics-2, here are my key values
+map[]
+/var/tmp/824-157915/skv-9966-basics-5 get shard from server /var/tmp/824-157915/skv-9966-basics-0
+/var/tmp/824-157915/skv-9966-basics-0 Received GetShard, shardNum=2
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-0 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-5 get shard from server /var/tmp/824-157915/skv-9966-basics-1
+/var/tmp/824-157915/skv-9966-basics-1 Received GetShard, shardNum=2
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-1 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-5 get shard from server /var/tmp/824-157915/skv-9966-basics-2
+/var/tmp/824-157915/skv-9966-basics-2 Received GetShard, shardNum=2
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-2 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-3 get shard from server /var/tmp/824-157915/skv-9966-basics-0
+/var/tmp/824-157915/skv-9966-basics-0 Received GetShard, shardNum=3
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-0 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-3 get shard from server /var/tmp/824-157915/skv-9966-basics-1
+/var/tmp/824-157915/skv-9966-basics-1 Received GetShard, shardNum=3
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-1 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-3 get shard from server /var/tmp/824-157915/skv-9966-basics-2
+/var/tmp/824-157915/skv-9966-basics-2 Received GetShard, shardNum=3
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-2 does not own the shard
+I am /var/tmp/824-157915/skv-9966-basics-6, here are my key values
+map[]
+/var/tmp/824-157915/skv-9966-basics-4 get shard from server /var/tmp/824-157915/skv-9966-basics-0
+/var/tmp/824-157915/skv-9966-basics-0 Received GetShard, shardNum=3
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-0 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-4 get shard from server /var/tmp/824-157915/skv-9966-basics-1
+/var/tmp/824-157915/skv-9966-basics-1 Received GetShard, shardNum=3
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-1 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-4 get shard from server /var/tmp/824-157915/skv-9966-basics-2
+/var/tmp/824-157915/skv-9966-basics-2 Received GetShard, shardNum=3
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-2 does not own the shard
+I am /var/tmp/824-157915/skv-9966-basics-7, here are my key values
+map[]
+/var/tmp/824-157915/skv-9966-basics-5 get shard from server /var/tmp/824-157915/skv-9966-basics-0
+/var/tmp/824-157915/skv-9966-basics-0 Received GetShard, shardNum=3
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-0 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-5 get shard from server /var/tmp/824-157915/skv-9966-basics-1
+/var/tmp/824-157915/skv-9966-basics-1 Received GetShard, shardNum=3
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-1 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-5 get shard from server /var/tmp/824-157915/skv-9966-basics-2
+/var/tmp/824-157915/skv-9966-basics-2 Received GetShard, shardNum=3
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-2 does not own the shard
+I am /var/tmp/824-157915/skv-9966-basics-8, here are my key values
+map[]
+/var/tmp/824-157915/skv-9966-basics-3 get shard from server /var/tmp/824-157915/skv-9966-basics-0
+/var/tmp/824-157915/skv-9966-basics-0 Received GetShard, shardNum=4
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-0 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-3 get shard from server /var/tmp/824-157915/skv-9966-basics-1
+/var/tmp/824-157915/skv-9966-basics-1 Received GetShard, shardNum=4
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-1 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-3 get shard from server /var/tmp/824-157915/skv-9966-basics-2
+/var/tmp/824-157915/skv-9966-basics-2 Received GetShard, shardNum=4
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-2 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-4 get shard from server /var/tmp/824-157915/skv-9966-basics-0
+/var/tmp/824-157915/skv-9966-basics-0 Received GetShard, shardNum=4
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-0 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-4 get shard from server /var/tmp/824-157915/skv-9966-basics-1
+/var/tmp/824-157915/skv-9966-basics-1 Received GetShard, shardNum=4
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-1 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-4 get shard from server /var/tmp/824-157915/skv-9966-basics-2
+/var/tmp/824-157915/skv-9966-basics-2 Received GetShard, shardNum=4
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-2 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-5 get shard from server /var/tmp/824-157915/skv-9966-basics-0
+/var/tmp/824-157915/skv-9966-basics-0 Received GetShard, shardNum=4
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-0 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-5 get shard from server /var/tmp/824-157915/skv-9966-basics-1
+/var/tmp/824-157915/skv-9966-basics-1 Received GetShard, shardNum=4
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-1 does not own the shard
+/var/tmp/824-157915/skv-9966-basics-5 get shard from server /var/tmp/824-157915/skv-9966-basics-2
+/var/tmp/824-157915/skv-9966-basics-2 Received GetShard, shardNum=4
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-basics-2 does not own the shard
+I am /var/tmp/824-157915/skv-9966-basics-0, here are my key values
+map[5577006791947779410:8674665223082153551 6129484611666145821:4037200794235010051 605394647632969758:1443635317331776148 894385949183117216:2775422040480279449 4751997750760398084:7504504064263669287 1976235410884491574:3510942875414458836 2933568871211445515:4324745483838182873 a:xb 6263450610539110790:2015796113853353331 2610529275472644968:2703387474910584091 3916589616287113937:6334824724549167320]
+I am /var/tmp/824-157915/skv-9966-basics-1, here are my key values
+map[]
+I am /var/tmp/824-157915/skv-9966-basics-2, here are my key values
+map[]
+I am /var/tmp/824-157915/skv-9966-basics-3, here are my key values
+map[]
+I am /var/tmp/824-157915/skv-9966-basics-4, here are my key values
+map[]
+I am /var/tmp/824-157915/skv-9966-basics-5, here are my key values
+map[]
+I am /var/tmp/824-157915/skv-9966-basics-6, here are my key values
+map[]
+I am /var/tmp/824-157915/skv-9966-basics-7, here are my key values
+map[]
+I am /var/tmp/824-157915/skv-9966-basics-8, here are my key values
+map[]
+I am /var/tmp/824-157915/skv-9966-basics-0, here are my key values
+map[2933568871211445515:4324745483838182873 a:xb 5577006791947779410:8674665223082153551 6129484611666145821:4037200794235010051 605394647632969758:1443635317331776148 894385949183117216:2775422040480279449 4751997750760398084:7504504064263669287 1976235410884491574:3510942875414458836 2610529275472644968:2703387474910584091 6263450610539110790:2015796113853353331 3916589616287113937:6334824724549167320]
+I am /var/tmp/824-157915/skv-9966-basics-1, here are my key values
+map[]
+I am /var/tmp/824-157915/skv-9966-basics-2, here are my key values
+map[]
+I am /var/tmp/824-157915/skv-9966-basics-3, here are my key values
+map[]
+I am /var/tmp/824-157915/skv-9966-basics-4, here are my key values
+map[]
+I am /var/tmp/824-157915/skv-9966-basics-5, here are my key values
+map[]
+I am /var/tmp/824-157915/skv-9966-basics-6, here are my key values
+map[]
+/var/tmp/824-157915/skv-9966-basics-0 Received Get, Key=5577006791947779410
+Current sequence = 14
+seq = 14, Op=<nil>, status=2
+Paxos have decided on {Get 5577006791947779410  {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}
+get a key that doesn't belong to me
+Performed operation:{Get 5577006791947779410  {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}, result=
+
+inside get, result={ map[] ErrWrongGroup}
+I am /var/tmp/824-157915/skv-9966-basics-7, here are my key values
+map[]
+I am /var/tmp/824-157915/skv-9966-basics-8, here are my key values
+map[]
+/var/tmp/824-157915/skv-9966-basics-3 Received Get, Key=5577006791947779410
+Current sequence = 1
+seq = 1, Op=<nil>, status=2
+Paxos have decided on {Get 5577006791947779410  {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}
+Performed operation:{Get 5577006791947779410  {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}, result=
+
+inside get, result={ map[] ErrNoKey}
+--- FAIL: TestBasic (1.59s)
+	test_test.go:154: joining; wrong value; g=1 k=5577006791947779410 wanted=8674665223082153551 got=
+/var/tmp/824-157915/skv-9966-moves-0 come up, config={0 [0 0 0 0 0 0 0 0 0 0] map[]}
+/var/tmp/824-157915/skv-9966-moves-1 come up, config={0 [0 0 0 0 0 0 0 0 0 0] map[]}
+I am /var/tmp/824-157915/skv-9966-moves-0, here are my key values
+map[]
+I am /var/tmp/824-157915/skv-9966-moves-1, here are my key values
+map[]
+/var/tmp/824-157915/skv-9966-moves-2 come up, config={0 [0 0 0 0 0 0 0 0 0 0] map[]}
+/var/tmp/824-157915/skv-9966-moves-3 come up, config={0 [0 0 0 0 0 0 0 0 0 0] map[]}
+I am /var/tmp/824-157915/skv-9966-moves-2, here are my key values
+map[]
+/var/tmp/824-157915/skv-9966-moves-4 come up, config={0 [0 0 0 0 0 0 0 0 0 0] map[]}
+I am /var/tmp/824-157915/skv-9966-moves-3, here are my key values
+map[]
+I am /var/tmp/824-157915/skv-9966-moves-4, here are my key values
+map[]
+/var/tmp/824-157915/skv-9966-moves-5 come up, config={0 [0 0 0 0 0 0 0 0 0 0] map[]}
+/var/tmp/824-157915/skv-9966-moves-6 come up, config={0 [0 0 0 0 0 0 0 0 0 0] map[]}
+I am /var/tmp/824-157915/skv-9966-moves-5, here are my key values
+map[]
+/var/tmp/824-157915/skv-9966-moves-7 come up, config={0 [0 0 0 0 0 0 0 0 0 0] map[]}
+I am /var/tmp/824-157915/skv-9966-moves-6, here are my key values
+map[]
+I am /var/tmp/824-157915/skv-9966-moves-7, here are my key values
+map[]
+/var/tmp/824-157915/skv-9966-moves-8 come up, config={0 [0 0 0 0 0 0 0 0 0 0] map[]}
+Test: Shards really move ...
+In Tick, /var/tmp/824-157915/skv-9966-moves-8 config change to {1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2]]}
+In Tick, /var/tmp/824-157915/skv-9966-moves-0 config change to {1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2]]}
+/var/tmp/824-157915/skv-9966-moves-0 Received Put, Key=0,Value=0
+Current sequence = 1
+seq = 1, Op=<nil>
+In Tick, /var/tmp/824-157915/skv-9966-moves-1 config change to {1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2]]}
+Paxos have decided on {Put 0 0 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}
+Performed operation:{Put 0 0 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0},result=0
+
+/var/tmp/824-157915/skv-9966-moves-0 Received Put, Key=1,Value=1
+Current sequence = 2
+seq = 2, Op=<nil>
+Paxos have decided on {Put 1 1 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}
+Performed operation:{Put 1 1 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0},result=1
+
+/var/tmp/824-157915/skv-9966-moves-0 Received Put, Key=2,Value=2
+Current sequence = 3
+seq = 3, Op=<nil>
+Paxos have decided on {Put 2 2 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}
+Performed operation:{Put 2 2 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0},result=2
+
+In Tick, /var/tmp/824-157915/skv-9966-moves-2 config change to {1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2]]}
+/var/tmp/824-157915/skv-9966-moves-0 Received Put, Key=3,Value=3
+Current sequence = 4
+seq = 4, Op=<nil>
+Paxos have decided on {Put 3 3 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}
+Performed operation:{Put 3 3 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0},result=3
+
+/var/tmp/824-157915/skv-9966-moves-0 Received Put, Key=4,Value=4
+Current sequence = 5
+seq = 5, Op=<nil>
+In Tick, /var/tmp/824-157915/skv-9966-moves-3 config change to {1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2]]}
+Paxos have decided on {Put 4 4 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}
+Performed operation:{Put 4 4 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0},result=4
+
+/var/tmp/824-157915/skv-9966-moves-0 Received Put, Key=5,Value=5
+Current sequence = 6
+seq = 6, Op=<nil>
+In Tick, /var/tmp/824-157915/skv-9966-moves-4 config change to {1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2]]}
+Paxos have decided on {Put 5 5 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}
+Performed operation:{Put 5 5 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0},result=5
+
+/var/tmp/824-157915/skv-9966-moves-0 Received Put, Key=6,Value=6
+Current sequence = 7
+seq = 7, Op=<nil>
+Paxos have decided on {Put 6 6 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}
+Performed operation:{Put 6 6 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0},result=6
+
+/var/tmp/824-157915/skv-9966-moves-0 Received Put, Key=7,Value=7
+Current sequence = 8
+seq = 8, Op=<nil>
+Paxos have decided on {Put 7 7 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}
+Performed operation:{Put 7 7 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0},result=7
+
+/var/tmp/824-157915/skv-9966-moves-0 Received Put, Key=8,Value=8
+Current sequence = 9
+seq = 9, Op=<nil>
+In Tick, /var/tmp/824-157915/skv-9966-moves-5 config change to {1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2]]}
+Paxos have decided on {Put 8 8 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}
+Performed operation:{Put 8 8 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0},result=8
+
+/var/tmp/824-157915/skv-9966-moves-0 Received Put, Key=9,Value=9
+Current sequence = 10
+seq = 10, Op=<nil>
+Paxos have decided on {Put 9 9 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0}
+Performed operation:{Put 9 9 {0 [0 0 0 0 0 0 0 0 0 0] map[]} 0},result=9
+
+In Tick, /var/tmp/824-157915/skv-9966-moves-6 config change to {1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2]]}
+In Tick, /var/tmp/824-157915/skv-9966-moves-7 config change to {2 [101 101 101 101 101 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2] 101:[/var/tmp/824-157915/skv-9966-moves-3 /var/tmp/824-157915/skv-9966-moves-4 /var/tmp/824-157915/skv-9966-moves-5]]}
+Inside startReconfig
+new config={2 [101 101 101 101 101 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2] 101:[/var/tmp/824-157915/skv-9966-moves-3 /var/tmp/824-157915/skv-9966-moves-4 /var/tmp/824-157915/skv-9966-moves-5]]}
+current config={0 [0 0 0 0 0 0 0 0 0 0] map[]}
+I am /var/tmp/824-157915/skv-9966-moves-7, here are my key values
+map[]
+In Tick, /var/tmp/824-157915/skv-9966-moves-8 config change to {2 [101 101 101 101 101 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2] 101:[/var/tmp/824-157915/skv-9966-moves-3 /var/tmp/824-157915/skv-9966-moves-4 /var/tmp/824-157915/skv-9966-moves-5]]}
+Inside startReconfig
+new config={2 [101 101 101 101 101 100 100 100 100 100] map[101:[/var/tmp/824-157915/skv-9966-moves-3 /var/tmp/824-157915/skv-9966-moves-4 /var/tmp/824-157915/skv-9966-moves-5] 100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2]]}
+current config={1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2]]}
+I am /var/tmp/824-157915/skv-9966-moves-8, here are my key values
+map[]
+In Tick, /var/tmp/824-157915/skv-9966-moves-0 config change to {2 [101 101 101 101 101 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2] 101:[/var/tmp/824-157915/skv-9966-moves-3 /var/tmp/824-157915/skv-9966-moves-4 /var/tmp/824-157915/skv-9966-moves-5]]}
+Inside startReconfig
+new config={2 [101 101 101 101 101 100 100 100 100 100] map[101:[/var/tmp/824-157915/skv-9966-moves-3 /var/tmp/824-157915/skv-9966-moves-4 /var/tmp/824-157915/skv-9966-moves-5] 100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2]]}
+current config={1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2]]}
+I am /var/tmp/824-157915/skv-9966-moves-0, here are my key values
+map[9:9 0:0 2:2 4:4 7:7 8:8 1:1 3:3 5:5 6:6]
+In Tick, /var/tmp/824-157915/skv-9966-moves-1 config change to {2 [101 101 101 101 101 100 100 100 100 100] map[101:[/var/tmp/824-157915/skv-9966-moves-3 /var/tmp/824-157915/skv-9966-moves-4 /var/tmp/824-157915/skv-9966-moves-5] 100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2]]}
+Inside startReconfig
+new config={2 [101 101 101 101 101 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2] 101:[/var/tmp/824-157915/skv-9966-moves-3 /var/tmp/824-157915/skv-9966-moves-4 /var/tmp/824-157915/skv-9966-moves-5]]}
+current config={1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2]]}
+I am /var/tmp/824-157915/skv-9966-moves-1, here are my key values
+map[]
+In Tick, /var/tmp/824-157915/skv-9966-moves-2 config change to {2 [101 101 101 101 101 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2] 101:[/var/tmp/824-157915/skv-9966-moves-3 /var/tmp/824-157915/skv-9966-moves-4 /var/tmp/824-157915/skv-9966-moves-5]]}
+Inside startReconfig
+new config={2 [101 101 101 101 101 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2] 101:[/var/tmp/824-157915/skv-9966-moves-3 /var/tmp/824-157915/skv-9966-moves-4 /var/tmp/824-157915/skv-9966-moves-5]]}
+current config={1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2]]}
+I am /var/tmp/824-157915/skv-9966-moves-2, here are my key values
+map[]
+In Tick, /var/tmp/824-157915/skv-9966-moves-3 config change to {2 [101 101 101 101 101 100 100 100 100 100] map[101:[/var/tmp/824-157915/skv-9966-moves-3 /var/tmp/824-157915/skv-9966-moves-4 /var/tmp/824-157915/skv-9966-moves-5] 100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2]]}
+Inside startReconfig
+new config={2 [101 101 101 101 101 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2] 101:[/var/tmp/824-157915/skv-9966-moves-3 /var/tmp/824-157915/skv-9966-moves-4 /var/tmp/824-157915/skv-9966-moves-5]]}
+current config={1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2]]}
+/var/tmp/824-157915/skv-9966-moves-3 get shard from server /var/tmp/824-157915/skv-9966-moves-0
+/var/tmp/824-157915/skv-9966-moves-0 Received GetShard, shardNum=0
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-0 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-3 get shard from server /var/tmp/824-157915/skv-9966-moves-1
+/var/tmp/824-157915/skv-9966-moves-1 Received GetShard, shardNum=0
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-1 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-3 get shard from server /var/tmp/824-157915/skv-9966-moves-2
+/var/tmp/824-157915/skv-9966-moves-2 Received GetShard, shardNum=0
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-2 does not own the shard
+In Tick, /var/tmp/824-157915/skv-9966-moves-4 config change to {2 [101 101 101 101 101 100 100 100 100 100] map[101:[/var/tmp/824-157915/skv-9966-moves-3 /var/tmp/824-157915/skv-9966-moves-4 /var/tmp/824-157915/skv-9966-moves-5] 100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2]]}
+Inside startReconfig
+new config={2 [101 101 101 101 101 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2] 101:[/var/tmp/824-157915/skv-9966-moves-3 /var/tmp/824-157915/skv-9966-moves-4 /var/tmp/824-157915/skv-9966-moves-5]]}
+current config={1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2]]}
+/var/tmp/824-157915/skv-9966-moves-4 get shard from server /var/tmp/824-157915/skv-9966-moves-0
+/var/tmp/824-157915/skv-9966-moves-0 Received GetShard, shardNum=0
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-0 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-4 get shard from server /var/tmp/824-157915/skv-9966-moves-1
+/var/tmp/824-157915/skv-9966-moves-1 Received GetShard, shardNum=0
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-1 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-4 get shard from server /var/tmp/824-157915/skv-9966-moves-2
+/var/tmp/824-157915/skv-9966-moves-2 Received GetShard, shardNum=0
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-2 does not own the shard
+In Tick, /var/tmp/824-157915/skv-9966-moves-5 config change to {2 [101 101 101 101 101 100 100 100 100 100] map[101:[/var/tmp/824-157915/skv-9966-moves-3 /var/tmp/824-157915/skv-9966-moves-4 /var/tmp/824-157915/skv-9966-moves-5] 100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2]]}
+Inside startReconfig
+new config={2 [101 101 101 101 101 100 100 100 100 100] map[101:[/var/tmp/824-157915/skv-9966-moves-3 /var/tmp/824-157915/skv-9966-moves-4 /var/tmp/824-157915/skv-9966-moves-5] 100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2]]}
+current config={1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2]]}
+/var/tmp/824-157915/skv-9966-moves-5 get shard from server /var/tmp/824-157915/skv-9966-moves-0
+/var/tmp/824-157915/skv-9966-moves-0 Received GetShard, shardNum=0
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-0 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-5 get shard from server /var/tmp/824-157915/skv-9966-moves-1
+/var/tmp/824-157915/skv-9966-moves-1 Received GetShard, shardNum=0
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-1 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-5 get shard from server /var/tmp/824-157915/skv-9966-moves-2
+/var/tmp/824-157915/skv-9966-moves-2 Received GetShard, shardNum=0
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-2 does not own the shard
+In Tick, /var/tmp/824-157915/skv-9966-moves-6 config change to {2 [101 101 101 101 101 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2] 101:[/var/tmp/824-157915/skv-9966-moves-3 /var/tmp/824-157915/skv-9966-moves-4 /var/tmp/824-157915/skv-9966-moves-5]]}
+Inside startReconfig
+new config={2 [101 101 101 101 101 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2] 101:[/var/tmp/824-157915/skv-9966-moves-3 /var/tmp/824-157915/skv-9966-moves-4 /var/tmp/824-157915/skv-9966-moves-5]]}
+current config={1 [100 100 100 100 100 100 100 100 100 100] map[100:[/var/tmp/824-157915/skv-9966-moves-0 /var/tmp/824-157915/skv-9966-moves-1 /var/tmp/824-157915/skv-9966-moves-2]]}
+I am /var/tmp/824-157915/skv-9966-moves-6, here are my key values
+map[]
+I am /var/tmp/824-157915/skv-9966-moves-7, here are my key values
+map[]
+/var/tmp/824-157915/skv-9966-moves-3 get shard from server /var/tmp/824-157915/skv-9966-moves-0
+/var/tmp/824-157915/skv-9966-moves-0 Received GetShard, shardNum=1
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-0 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-3 get shard from server /var/tmp/824-157915/skv-9966-moves-1
+/var/tmp/824-157915/skv-9966-moves-1 Received GetShard, shardNum=1
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-1 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-3 get shard from server /var/tmp/824-157915/skv-9966-moves-2
+/var/tmp/824-157915/skv-9966-moves-2 Received GetShard, shardNum=1
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-2 does not own the shard
+I am /var/tmp/824-157915/skv-9966-moves-8, here are my key values
+map[]
+/var/tmp/824-157915/skv-9966-moves-4 get shard from server /var/tmp/824-157915/skv-9966-moves-0
+/var/tmp/824-157915/skv-9966-moves-0 Received GetShard, shardNum=1
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-0 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-4 get shard from server /var/tmp/824-157915/skv-9966-moves-1
+/var/tmp/824-157915/skv-9966-moves-1 Received GetShard, shardNum=1
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-1 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-4 get shard from server /var/tmp/824-157915/skv-9966-moves-2
+/var/tmp/824-157915/skv-9966-moves-2 Received GetShard, shardNum=1
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-2 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-5 get shard from server /var/tmp/824-157915/skv-9966-moves-0
+/var/tmp/824-157915/skv-9966-moves-0 Received GetShard, shardNum=1
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-0 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-5 get shard from server /var/tmp/824-157915/skv-9966-moves-1
+/var/tmp/824-157915/skv-9966-moves-1 Received GetShard, shardNum=1
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-1 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-5 get shard from server /var/tmp/824-157915/skv-9966-moves-2
+/var/tmp/824-157915/skv-9966-moves-2 Received GetShard, shardNum=1
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-2 does not own the shard
+I am /var/tmp/824-157915/skv-9966-moves-0, here are my key values
+map[0:0 2:2 4:4 7:7 9:9 1:1 3:3 5:5 6:6 8:8]
+/var/tmp/824-157915/skv-9966-moves-3 get shard from server /var/tmp/824-157915/skv-9966-moves-0
+/var/tmp/824-157915/skv-9966-moves-0 Received GetShard, shardNum=2
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-0 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-3 get shard from server /var/tmp/824-157915/skv-9966-moves-1
+/var/tmp/824-157915/skv-9966-moves-1 Received GetShard, shardNum=2
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-1 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-3 get shard from server /var/tmp/824-157915/skv-9966-moves-2
+/var/tmp/824-157915/skv-9966-moves-2 Received GetShard, shardNum=2
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-2 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-4 get shard from server /var/tmp/824-157915/skv-9966-moves-0
+/var/tmp/824-157915/skv-9966-moves-0 Received GetShard, shardNum=2
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-0 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-4 get shard from server /var/tmp/824-157915/skv-9966-moves-1
+I am /var/tmp/824-157915/skv-9966-moves-1, here are my key values
+map[]
+/var/tmp/824-157915/skv-9966-moves-1 Received GetShard, shardNum=2
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-1 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-4 get shard from server /var/tmp/824-157915/skv-9966-moves-2
+/var/tmp/824-157915/skv-9966-moves-2 Received GetShard, shardNum=2
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-2 does not own the shard
+I am /var/tmp/824-157915/skv-9966-moves-2, here are my key values
+map[]
+/var/tmp/824-157915/skv-9966-moves-5 get shard from server /var/tmp/824-157915/skv-9966-moves-0
+/var/tmp/824-157915/skv-9966-moves-0 Received GetShard, shardNum=2
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-0 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-5 get shard from server /var/tmp/824-157915/skv-9966-moves-1
+/var/tmp/824-157915/skv-9966-moves-1 Received GetShard, shardNum=2
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-1 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-5 get shard from server /var/tmp/824-157915/skv-9966-moves-2
+/var/tmp/824-157915/skv-9966-moves-2 Received GetShard, shardNum=2
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-2 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-3 get shard from server /var/tmp/824-157915/skv-9966-moves-0
+/var/tmp/824-157915/skv-9966-moves-0 Received GetShard, shardNum=3
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-0 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-3 get shard from server /var/tmp/824-157915/skv-9966-moves-1
+/var/tmp/824-157915/skv-9966-moves-1 Received GetShard, shardNum=3
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-1 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-3 get shard from server /var/tmp/824-157915/skv-9966-moves-2
+/var/tmp/824-157915/skv-9966-moves-2 Received GetShard, shardNum=3
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-2 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-4 get shard from server /var/tmp/824-157915/skv-9966-moves-0
+/var/tmp/824-157915/skv-9966-moves-0 Received GetShard, shardNum=3
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-0 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-4 get shard from server /var/tmp/824-157915/skv-9966-moves-1
+/var/tmp/824-157915/skv-9966-moves-1 Received GetShard, shardNum=3
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-1 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-4 get shard from server /var/tmp/824-157915/skv-9966-moves-2
+/var/tmp/824-157915/skv-9966-moves-2 Received GetShard, shardNum=3
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-2 does not own the shard
+I am /var/tmp/824-157915/skv-9966-moves-6, here are my key values
+map[]
+I am /var/tmp/824-157915/skv-9966-moves-7, here are my key values
+map[]
+/var/tmp/824-157915/skv-9966-moves-5 get shard from server /var/tmp/824-157915/skv-9966-moves-0
+/var/tmp/824-157915/skv-9966-moves-0 Received GetShard, shardNum=3
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-0 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-5 get shard from server /var/tmp/824-157915/skv-9966-moves-1
+/var/tmp/824-157915/skv-9966-moves-1 Received GetShard, shardNum=3
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-1 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-5 get shard from server /var/tmp/824-157915/skv-9966-moves-2
+/var/tmp/824-157915/skv-9966-moves-2 Received GetShard, shardNum=3
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-2 does not own the shard
+I am /var/tmp/824-157915/skv-9966-moves-8, here are my key values
+map[]
+/var/tmp/824-157915/skv-9966-moves-3 get shard from server /var/tmp/824-157915/skv-9966-moves-0
+/var/tmp/824-157915/skv-9966-moves-0 Received GetShard, shardNum=4
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-0 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-3 get shard from server /var/tmp/824-157915/skv-9966-moves-1
+/var/tmp/824-157915/skv-9966-moves-1 Received GetShard, shardNum=4
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-1 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-3 get shard from server /var/tmp/824-157915/skv-9966-moves-2
+/var/tmp/824-157915/skv-9966-moves-2 Received GetShard, shardNum=4
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-2 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-4 get shard from server /var/tmp/824-157915/skv-9966-moves-0
+/var/tmp/824-157915/skv-9966-moves-0 Received GetShard, shardNum=4
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-0 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-4 get shard from server /var/tmp/824-157915/skv-9966-moves-1
+/var/tmp/824-157915/skv-9966-moves-1 Received GetShard, shardNum=4
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-1 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-4 get shard from server /var/tmp/824-157915/skv-9966-moves-2
+/var/tmp/824-157915/skv-9966-moves-2 Received GetShard, shardNum=4
+args.ConfigNum =2, kv.config.Num=2
+/var/tmp/824-157915/skv-9966-moves-2 does not own the shard
+/var/tmp/824-157915/skv-9966-moves-5 get shard from server /var/tmp/824-157915/skv-9966-moves-0
